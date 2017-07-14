@@ -1,2 +1,5 @@
 import sqlite3
-conn = sqlite3.connect('example.db')
+import pandas as pd
+conn = sqlite3.connect('sqlite.db')
+df = pd.read_sql_query("SELECT * FROM 'exec';", conn)
+
